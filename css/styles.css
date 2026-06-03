@@ -1,0 +1,222 @@
+/* =======================================
+  VerkoopDit - Custom Styles
+    Loads AFTER Bootstrap so it overrides where needed.
+    ======================================= */
+
+/* -------- DESIGN TOKENS (CSS variables) -------- */
+:root {
+    --vd-primary:        #ffb168;   
+    --vd-primary-dark:   #ff829f;   
+    --vd-accent:         #f4a261;   /* warm orange */
+    --vd-accent-dark:    #e07a3a;
+    --vd-success:        #2a9d8f;
+    --vd-danger:         #e63946;
+    --vd-bg:             #f8f9fa;
+    --vd-card-bg:        #ffffff;
+    --vd-text:           #212529;
+    --vd-text-muted:     #6c757d;
+    --vd-border:         #dee2e6;
+    --vd-primary-light:  #ff829f;
+    --vd-radius:         12px;
+    --vd-shadow-sm:      0 2px 4px rgba(0,0,0,0.05);
+    --vd-shadow-md:      0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* -------- BASE -------- */
+body {
+    background: var(--vd-bg);
+    color: var(--vd-text);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+.vd-main {
+    min-height: 70vh;
+    padding-top: 1rem;
+}
+
+/* -------- NAVBAR -------- */
+.vd-navbar {
+    background: var(--vd-primary) !important;
+    box-shadow: var(--vd-shadow-sm);
+    padding-top: 0.65rem;
+    padding-bottom: 0.65rem;
+}
+.vd-navbar .navbar-brand {
+    color: #fff !important;
+    font-size: 1.5rem;
+}
+.vd-navbar .nav-link {
+    color: rgba(255,255,255,0.9) !important;
+    transition: color 0.2s;
+}
+.vd-navbar .nav-link:hover {
+    color: var(--vd-accent) !important;
+}
+
+/* -------- HERO SECTION (homepage) -------- */
+.vd-hero {
+    background: linear-gradient(135deg, var(--vd-primary) 0%, var(--vd-primary-dark) 100%);
+    color: white;
+    padding: 4rem 0;
+    text-align: center;
+    border-radius: var(--vd-radius);
+    margin-bottom: 2rem;
+}
+.vd-hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+.vd-hero p {
+    font-size: 1.25rem;
+    opacity: 0.9;
+}
+.vd-hero .btn {
+    padding: 0.75rem 2rem;
+    font-weight: 600;
+}
+
+/* -------- PRODUCT CARDS -------- */
+.vd-product-card {
+    border: 1px solid var(--vd-border);
+    border-radius: var(--vd-radius);
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.vd-product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--vd-shadow-md);
+}
+.vd-produc-img{
+    height: 200px;
+    object-fit: cover;
+    width: 100%;
+}
+.vd-price{
+    color: var(--vd-primary);
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+.vd-badge-condition{
+    background: var(--vd-accent) !important;
+    color: #fff !important;
+    font-weight: 500;
+    width: fit-content;
+}
+
+/* -------- CATEGORY PILLS (browse / home) -------- */
+.vd-category-pill {
+    display: inline-block;
+    padding: 0.5rem 1.2rem;
+    margin: 0.25rem;
+    background: white;
+    border: 1px solid var(--vd-border);
+    border-radius: 25px;
+    color: var(--vd-text);
+    text-decoration: none;
+    transition: all 0.2s;
+}
+.vd-category-pill.active{
+    background: var(--vd-primary);
+    color: #fff;
+    border-color: var(--vd-primary);
+}
+.vd-category-card {
+    background: var(--vd-primary-light);
+    border: none;
+    border-radius: var(--vd-radius);
+    transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+}
+.vd-category-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--vd-shadow-md);
+    background: var(--vd-primary);
+    color: #fff;
+}
+.vd-category-card:hover .card-title,
+.vd-category-card:hover i {
+    color: #fff !important;
+}
+/* -------- FORMS -------- */
+.vd-form-card {
+    background: var(--vd-card-bg);
+    border: 1px solid var(--vd-border);
+    border-radius: var(--vd-radius);
+    padding: 2rem;
+    box-shadow: var(--vd-shadow-sm);
+}
+.vd-form-card h2 {
+    color: var(--vd-primary);
+    margin-bottom: 1.5rem;
+}
+
+/* -------- DASHBOARD STAT BOXES -------- */
+.vd-stat{
+    background: white;
+    border-radius: var(--vd-radius);
+    box-shadow: var(--vd-shadow-sm);
+    padding: 1.5rem;
+    text-align: center;
+    border-left: 4px solid var(--vd-primary);
+}
+.vd-stat .vd-stat-label {
+    color: var(--vd-text-muted);
+    font-size: 0.9rem;
+}
+
+/* -------- TABLES -------- */
+.vd-table {
+    background: white;
+    border-radius: var(--vd-radius);
+    overflow: hidden;
+    box-shadow: var(--vd-shadow-sm);
+}
+.vd-table thead {
+    background: var(--vd-primary);
+    color: white;
+}
+
+/* -------- ORDER STATUS BADGES -------- */
+.vd-status-awaiting_payment { background: #6c757d; color: #fff; }
+.vd-status-paid { background: #0d6efd; color: #fff; }
+.vd-status-shipped { background: #198754; color: #fff; }
+.vd-status-confirmed { background: #2a9d8f; color: #fff; }
+.vd-status-completed { background: #20c997; color: #fff; }
+.vd-status-cancelled { background: #e63946; color: #fff; }
+.vd-status-pending { background: #ffc107; color: #212529; }
+
+/* -------- STAR RATING -------- */
+.vd-star-rating {
+    display: inline-flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    gap: 0.25rem;
+}
+.vd-star-rating input { display: none; }
+.vd-star-rating label {
+    color: #dee2e6;
+    cursor: pointer;
+    transition: color 0.15s;
+}
+.vd-star-rating input:checked  ~ label,
+.vd-star-rating label:hover,
+.vd-star-rating label:hover  ~ label {
+    color: #ffc107;
+}
+
+
+/* -------- FOOTER -------- */
+.vd-footer {
+    background: var(--vd-primary-dark);
+    color: white;
+}
+.vd-footer a:hover {
+    color: var(--vd-accent) !important;
+}
+
+/* -------- RESPONSIVE TWEAKS -------- */
+@media (max-width: 768px) {
+    .vd-hero h1 {font-size: 1.75rem;}
+    .vd-hero p {font-size: 1rem;}
+    .vd-product-img {height: 160px;}
+}
+
