@@ -41,7 +41,7 @@ $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 $cats = $pdo->query("SELECT * FROM categories ORDER BY CASE WHEN cat_name = 'Other' THEN 1 ELSE 0 END, cat_name")->fetchAll(PDO::FETCH_ASSOC);  
 
-$page_title = 'Browse - VerkoopDit';
+$page_title = 'Browse - WhyNot?';
 include __DIR__ . '/includes/header.php';
 ?>
 

@@ -1,24 +1,12 @@
 <?php
 
-/*
-| includes/db.php
-| -----------------
-| The database connection.  Included at the top of EVERY page that
-| talks to MySQL.  Uses PDO with prepared statements (safe from SQL
-| injection).
-
-| Usage in any page:
-|     require_once __DIR__ . '/includes/db.php';
-|     $stmt = $pdo->query("SELECT * FROM products");
-*/
-
 // Show errors during development - REMOVE before deployment
 ini_set('display_errors', 1);
 error_clear_last();
 error_reporting(E_ALL);
 
 $DB_HOST = 'localhost';        // change to InfinityFree's MySQL host when deploying
-$DB_NAME = 'verkoopDit';       // your database name
+$DB_NAME = 'verkoopdit';       // your database name
 $DB_USER = 'root';             // default XAMPP user
 $DB_PASS = '';                 // default XAMPP password is empty
 

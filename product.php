@@ -84,7 +84,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['buy_now'])) {
 
 $img = !empty($product['image_url']) ? "/VerkoopDit/uploads/" . htmlspecialchars($product['image_url']) : 'https://via.placeholder.com/400x300?text=No+Image';
 
-$page_title = $product['prod_title'] . ' - VerkoopDit';
+$page_title = $product['prod_title'] . ' - WhyNot?';
 include __DIR__ . '/includes/header.php';
 ?>
 

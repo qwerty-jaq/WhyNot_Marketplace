@@ -42,7 +42,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 
-$page_title = 'My Profile - VerkoopDit';
+$page_title = 'My Profile - WhyNot?';
 include __DIR__ . '/includes/header.php';
 ?>
 

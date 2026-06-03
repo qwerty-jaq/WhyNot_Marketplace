@@ -36,7 +36,7 @@ $stmt = $pdo->prepare("SELECT p.*, c.cat_name FROM products p LEFT JOIN categori
 $stmt->execute([$me]);
 $listings = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-$page_title = 'Seller Dashboard - VerkoopDit';
+$page_title = 'Seller Dashboard - WhyNot?';
 include __DIR__ . '/includes/header.php';
 ?>
 

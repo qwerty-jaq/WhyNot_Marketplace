@@ -26,7 +26,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 
-$page_title = 'Login - VerkoopDit';
+$page_title = 'Login - WhyNot?';
 include __DIR__ . '/includes/header.php';
 ?>
 
@@ -35,7 +35,7 @@ include __DIR__ . '/includes/header.php';
         <div class="col-md-5">
             <div class="vd-form-card">
                 <h2 class="text-center">Login</h2>
-                <p class="text-muted text-center mb-4">Welcome back to VerkoopDit</p>
+                <p class="text-muted text-center mb-4">Welcome back to WhyNot?</p>
 
                 <?php if ($error): ?>
                     <div class="alert alert-danger"><?= htmlspecialchars($error) ?></div>
@@ -59,7 +59,7 @@ include __DIR__ . '/includes/header.php';
                     Don't have an account? <a href="register.php">Sign up here</a>
                 </p>
                 <p class="text-center small text-muted">
-                    Test logins: <code> admin@verkoopdit.co.za</code> / <code>password123</code>
+                    Test logins: <code> admin@whynot?.co.za</code> / <code>password123</code>
                 </p>
             </div>
         </div>

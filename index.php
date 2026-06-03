@@ -110,10 +110,10 @@ include __DIR__ . '/includes/header.php';
     <?php endif; ?>
 </section>
 
-<!-- =========== WHY VERKOOPDIT =========== -->
+<!-- =========== WHY WHYNOT? =========== -->
 <section class="vd-why py-5 bg-light">
     <div class="container">
-        <h2 class="text-center mb-5">Why VerkoopDit?</h2>
+        <h2 class="text-center mb-5">About WhyNot?</h2>
         <div class="row text-center">
             <div class="col-md-4 mb-4">
                 <i class="bi bi-shield-check fs-1 text-primary mb-3"></i>

@@ -53,7 +53,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 
-$page_title = 'Sell an Item - VerkoopDit';
+$page_title = 'Sell an Item - WhyNot?';
 include __DIR__ . '/includes/header.php';
 ?>
 

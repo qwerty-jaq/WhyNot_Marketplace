@@ -41,14 +41,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $user = $stmt->fetch();
             log_in_user($user['user_id'], $user['role_user'], $user['first_name']);
 
-            $_SESSION['flash'] = ['type' => 'success', 'msg' => 'Welcome to VerkoopDit, ' . $first_name . '!'];
+            $_SESSION['flash'] = ['type' => 'success', 'msg' => 'Welcome to WhyNot?, ' . $first_name . '!'];
             header('Location: index.php');
             exit;
         }
     }
 }
 
-$page_title = 'Sign Up - VerkoopDit';
+$page_title = 'Sign Up - WhyNot?';
 include __DIR__ . '/includes/header.php';
 ?>
 
@@ -57,7 +57,7 @@ include __DIR__ . '/includes/header.php';
         <div class="col-md-7">
             <div class="vd-form-card">
                 <h2 class="text-center">Create your account</h2>
-                <p class="text-muted text-center mb-4">Join VerkoopDit in less than a minute</p>
+                <p class="text-muted text-center mb-4">Join WhyNot? in less than a minute</p>
 
                 <?php if ($error): ?>
                     <div class="alert alert-danger"><?= htmlspecialchars($error) ?></div>

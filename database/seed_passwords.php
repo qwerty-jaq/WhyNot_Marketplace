@@ -6,7 +6,7 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
 $host = 'localhost'; //should change before final submission.
-$dbname = 'verkoopDit';
+$dbname = 'whyNot?';
 $username = 'root';
 $password = '';
 

@@ -62,7 +62,7 @@ $stmt = $pdo->prepare("SELECT * FROM orders WHERE seller_id = ? ORDER BY created
 $stmt->execute([$me]);
 $selling = $stmt->fetchAll();
 
-$page_title = "My Orders - VerkoopDit";
+$page_title = "My Orders - WhyNot?";
 include __DIR__ . '/includes/header.php';
 ?>
 

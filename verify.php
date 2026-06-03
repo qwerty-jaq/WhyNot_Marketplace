@@ -15,7 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['apply'])) {
     header('Location: verify.php'); exit;
 }
 
-$page_title = 'Seller Verification - VerkoopDit';
+$page_title = 'Seller Verification - WhyNot?';
 include __DIR__ . '/includes/header.php';
 ?>
 

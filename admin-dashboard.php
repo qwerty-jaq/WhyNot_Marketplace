@@ -42,7 +42,7 @@ $pending = $pdo->query("SELECT * FROM users WHERE verification_status = 'pending
 // All users
 $users = $pdo->query("SELECT * FROM users ORDER BY created_at DESC")->fetchAll();
 
-$page_title = 'Admin Dashboard - VerkoopDit';
+$page_title = 'Admin Dashboard - WhyNot?';
 include __DIR__ . '/includes/header.php';
 ?>
 
