@@ -66,7 +66,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
 
             <form method="POST">
                 <div class="mb-3 text-center">
-                    <label class="form-label d-block">Your Rating *</label>
+                    <label class="form-label d-block">Your Rating:</label>
                     <div class="vd-star-rating fs-2">
                         <?php for ($i = 5; $i >= 1; $i--): ?>
                             <input type="radio" name="rating" id="star<?= $i ?>" value="<?= $i ?>" <?= $i == 5 ? 'checked' : '' ?>>

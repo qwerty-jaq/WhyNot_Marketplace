@@ -27,15 +27,15 @@ include __DIR__ . '/includes/header.php';
             South Africa's friendliest marketplace built for everyone.
         </p>
         <div class="d-flex justify-content-center gap-3 flex-wrap">
-            <a href="/VerkoopDit/browse.php" class="btn btn-light btn-lg">
+            <a href="/whynot/browse.php" class="btn btn-light btn-lg">
                 <i class="bi bi-search"></i> Buy Now
             </a>
             <?php if (is_logged_in()): ?>
-                <a href="/VerkoopDit/sell.php" class="btn btn-outline-light btn-lg">
+                <a href="/whynot/sell.php" class="btn btn-outline-light btn-lg">
                     <i class="bi bi-plus-circle"></i> Sell Now
                 </a>
             <?php else: ?>
-                <a href="/VerkoopDit/register.php" class="btn btn-outline-light btn-lg">
+                <a href="/whynot/register.php" class="btn btn-outline-light btn-lg">
                     <i class="bi bi-person-plus"></i> Get Started
                 </a>
             <?php endif; ?>
@@ -47,14 +47,14 @@ include __DIR__ . '/includes/header.php';
 <section class="container py-5">
     <div class="d-flex justify-content-between align-items-center mb-4">
         <h2 class="mb-0">Latest Listings</h2>
-        <a href="/VerkoopDit/browse.php" class="btn btn-outline-primary">
+        <a href="/whynot/browse.php" class="btn btn-outline-primary">
             View All <i class="bi bi-arrow-right"></i>
         </a>
     </div>
 
     <?php if (empty($featured)): ?>
         <div class="alert alert-info">
-            No products listed yet. <a href="/VerkoopDit/register.php" class="alert-link">Sign up</a>
+            No products listed yet. <a href="/whynot/register.php" class="alert-link">Sign up</a>
             and be the first to sell!
         </div>
     <?php else: ?>
@@ -97,7 +97,7 @@ include __DIR__ . '/includes/header.php';
         ?>
         <?php foreach ($cats as $c): ?>
             <div class="col-6 col-md-3">
-                <a href="/VerkoopDit/browse.php?cat=<?= (int)$c['category_id'] ?>" class="text-decoration-none">
+                <a href="/whynot/browse.php?cat=<?= (int)$c['category_id'] ?>" class="text-decoration-none">
                     <div class="card text-center vd-category-card h-100 shadow-sm">
                         <div class="card-body">
                             <i class="bi <?= $iconMap[$c['cat_name']] ?? 'bi-tag-fill' ?> fs-2 text-primary mb-2"></i>

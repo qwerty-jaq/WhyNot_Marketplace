@@ -148,20 +148,20 @@ include __DIR__ . '/includes/header.php';
             </div>
 
             <div class="mb-3">
-                <label class="form-label">Cardholder Name *</label>
+                <label class="form-label">Cardholder Name</label>
                 <input type="text" name="cardholder" class="form-control" required value="<?= htmlspecialchars($_POST['cardholder'] ?? '') ?>">
             </div>
             <div class="mb-3">
-                <label class="form-label">Card Number *</label>
+                <label class="form-label">Card Number</label>
                 <input type="text" name="card_number" class="form-control" required placeholder="1234 5678 9012 3456" maxlength="19" value="<?= htmlspecialchars($_POST['card_number'] ?? '') ?>">
             </div>
             <div class="row">
                 <div class="col-md-6 mb-3">
-                    <label class="form-label">Expiry Date (MM/YY) *</label>
+                    <label class="form-label">Expiry Date (MM/YY)</label>
                     <input type="text" name="expiry" class="form-control" required placeholder="12/28" maxlength="5" value="<?= htmlspecialchars($_POST['expiry'] ?? '') ?>">
                 </div>
                 <div class="col-md-6">
-                    <label class="form-label">CVV *</label>
+                    <label class="form-label">CVV</label>
                     <input type="text" name="cvv" class="form-control" required placeholder="123" maxlength="4" value="<?= htmlspecialchars($_POST['cvv'] ?? '') ?>">
                 </div>
             </div>

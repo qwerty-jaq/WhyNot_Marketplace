@@ -69,7 +69,7 @@ include __DIR__ . '/includes/header.php';
 
                 <form method="POST" enctype="multipart/form-data" class="needs-validation" novalidate>
                     <div class="mb-3">
-                        <label class="form-label">Title *</label>
+                        <label class="form-label">Title</label>
                         <input type="text" name="title" class="form-control" maxlength="150" required>
                     </div>
                     <div class="mb-3">
@@ -77,11 +77,11 @@ include __DIR__ . '/includes/header.php';
                         <textarea name="description" class="form-control" rows="4"></textarea>
                     </div>
                     <div class="mb-3">
-                        <label class="form-label">Price (R) *</label>
+                        <label class="form-label">Price (R)</label>
                         <input type="number" name="price" class="form-control" step="0.01" min="0" required>
                     </div>
                     <div class="mb-3">
-                        <label class="form-label">Category *</label>
+                        <label class="form-label">Category</label>
                         <select name="category" class="form-select" required>
                             <option value="">Select a category</option>
                             <?php foreach ($cats as $c): ?>

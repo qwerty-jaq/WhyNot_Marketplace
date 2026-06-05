@@ -203,6 +203,13 @@ body {
     color: #ffc107;
 }
 
+/* -------- Brand -------- */
+.navbar-brand,
+.vd-hero h1 {
+    font-family: 'Playfair Display', Georgia, serif;
+    letter-spacing: 0.5px;
+}
+
 
 /* -------- FOOTER -------- */
 .vd-footer {

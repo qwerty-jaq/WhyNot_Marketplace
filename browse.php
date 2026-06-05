@@ -80,11 +80,11 @@ include __DIR__ . '/includes/header.php';
                     </div>
                     <div class="row">
                         <div class="mb-3">
-                            <label class="form-label">Min R</label>
+                            <label class="form-label">Min R:</label>
                             <input type="number" name="min" class="form-control" value="<?= $min > 0 ? (int)$min : '' ?>" placeholder="0">
                         </div>
                         <div class="mb-3">
-                            <label class="form-label">Max R</label>
+                            <label class="form-label">Max R:</label>
                             <input type="number" name="max" class="form-control" value="<?= $max > 0 ? (int)$max : '' ?>" placeholder="0">
                         </div>  
                     </div>

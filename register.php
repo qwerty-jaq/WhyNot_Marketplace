@@ -66,7 +66,7 @@ include __DIR__ . '/includes/header.php';
                 <form method="POST" class="needs-validation" novalidate>
                     <div class="row">
                         <div class="col-md-6 mb-3">
-                            <label class="form-label">First name *</label>
+                            <label class="form-label">First name</label>
                             <input type="text" name="first_name" class="form-control" required value="<?= htmlspecialchars($_POST['first_name'] ?? '') ?>">
                         </div>
                         <div class="col-md-6 mb-3">
@@ -75,15 +75,15 @@ include __DIR__ . '/includes/header.php';
                         </div>
                     </div>
                     <div class="mb-3">
-                        <label class="form-label">Username *</label>
+                        <label class="form-label">Username</label>
                         <input type="text" name="username" class="form-control" required value="<?= htmlspecialchars($_POST['username'] ?? '') ?>">
                     </div>
                     <div class="mb-3">
-                        <label class="form-label">Email *</label>
+                        <label class="form-label">Email</label>
                         <input type="email" name="email" class="form-control" required value="<?= htmlspecialchars($_POST['email'] ??'') ?>">
                     </div>
                     <div class="mb-3">
-                        <label class="form-label">Password *</label> <small class="text-muted">(min 8 characters)</small>
+                        <label class="form-label">Password</label> <small class="text-muted">(min 8 characters)</small>
                         <input type="password" name="password" class="form-control" required>
                     </div>
                     <div class="row">

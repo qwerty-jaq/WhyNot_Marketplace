@@ -25,15 +25,20 @@ $page_title = $page_title ?? 'WhyNot? - C2C Marketplace';
     <!-- Bootstrap Icons -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
 
+    <!-- Brand Front -->
+     <link rel="preconnect" href="https://font.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+
     <!-- Our custom styles (loaded LAST so it overrides Bootstrap) -->
-    <link rel="stylesheet" href="/VerkoopDit/css/styles.css">
+    <link rel="stylesheet" href="/whynot/css/styles.css">
     </head>
 <body>
 
 <!-- ============= NAVBAR ============= -->
 <nav class="navbar navbar-expand-lg navbar-dark sticky-top vd-navbar">
     <div class="container">
-        <a class="navbar-brand fw-bold" href="/VerkoopDit/index.php">
+        <a class="navbar-brand fw-bold" href="/whynot/index.php">
             <i class="bi bi-shop"></i> WhyNot?
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
@@ -41,27 +46,27 @@ $page_title = $page_title ?? 'WhyNot? - C2C Marketplace';
         </button>
         <div class="collapse navbar-collapse" id="mainNav">
             <ul class="navbar-nav me-auto">
-                <li class="nav-item"><a class="nav-link" href="/VerkoopDit/browse.php">Buy</a></li>
+                <li class="nav-item"><a class="nav-link" href="/whynot/browse.php"><i class="bi bi-search"></i>Buy</a></li>
                 <?php if (is_logged_in()): ?>
-                    <li class="nav-item"><a class="nav-link" href="/VerkoopDit/sell.php">Sell</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/VerkoopDit/orders.php">Orders</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/whynot/sell.php"><i class="bi bi-tag"></i>Sell</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/whynot/orders.php"><i class="bi bi-box-seam"></i>Orders</a></li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/VerkoopDit/messages.php">
-                            <i class="bi bi-chat-dots"></i>Messages
+                        <a class="nav-link" href="/whynot/messages.php">
+                            <i class="bi bi-chat-dots"></i> Messages
                             <?php if ($navbar_unread > 0): ?>
                                 <span class="badge bg-danger rounded-pill"><?= $navbar_unread ?></span>
                             <?php endif; ?>
                         </a>
                     </li>
-                    <li class="nav-item"><a class="nav-link" href="/VerkoopDit/seller-dashboard.php">Dashboard</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/whynot/seller-dashboard.php"><i class="bi bi-speedometer2"></i>Dashboard</a></li>
                     <?php if (current_user_role() === 'admin'): ?>
-                        <li class="nav-item"><a class="nav-link text-warning" href="/VerkoopDit/admin-dashboard.php">Admin</a></li>
+                        <li class="nav-item"><a class="nav-link text-warning" href="/whynot/admin-dashboard.php"><i class="bi bi-shield-lock-fill"></i>Admin</a></li>
                     <?php endif; ?>
                 <?php endif; ?>
             </ul>
 
             <!-- Search bar -->
-            <form class="d-flex me-3" action="/VerkoopDit/browse.php" method="GET">
+            <form class="d-flex me-3" action="/whynot/browse.php" method="GET">
                 <input class="form-control me-2" type="search" name="q" placeholder="Search items..." aria-label="Search">
                 <button class="btn btn-light" type="submit"><i class="bi bi-search"></i></button>
             </form>
@@ -74,13 +79,13 @@ $page_title = $page_title ?? 'WhyNot? - C2C Marketplace';
                             <i class="bi bi-person-circle"></i> <?= htmlspecialchars(current_user_name() ?? 'Account') ?>
                         </a>
                         <ul class="dropdown-menu dropdown-menu-end">
-                            <li><a class="dropdown-item" href="/VerkoopDit/profile.php"><i class="bi bi-person"></i> My Profile</a></li>
-                            <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#logoutModal">Logout</a></li>
+                            <li><a class="dropdown-item" href="/whynot/profile.php"><i class="bi bi-person"></i> My Profile</a></li>
+                            <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#logoutModal"><i class="bi bi-box-arrow-right"></i>Logout</a></li>
                         </ul>
                     </li>
                 <?php else: ?>
-                    <li class="nav-item"><a class="nav-link" href="/VerkoopDit/login.php">Login</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/VerkoopDit/register.php">Register</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/whynot/login.php">Login</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/whynot/register.php">Register</a></li>
                 <?php endif; ?>
             </ul>
         </div>
@@ -100,7 +105,7 @@ $page_title = $page_title ?? 'WhyNot? - C2C Marketplace';
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                    <a href="/VerkoopDit/logout.php" class="btn btn-danger">Yes, log out</a>
+                    <a href="/whynot/logout.php" class="btn btn-danger">Yes, log out</a>
                 </div>
             </div>
         </div>

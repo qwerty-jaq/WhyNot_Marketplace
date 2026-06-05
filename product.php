@@ -82,7 +82,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['buy_now'])) {
         
 
 
-$img = !empty($product['image_url']) ? "/VerkoopDit/uploads/" . htmlspecialchars($product['image_url']) : 'https://via.placeholder.com/400x300?text=No+Image';
+$img = !empty($product['image_url']) ? "/whynot/uploads/" . htmlspecialchars($product['image_url']) : 'https://via.placeholder.com/400x300?text=No+Image';
 
 $page_title = $product['prod_title'] . ' - WhyNot?';
 include __DIR__ . '/includes/header.php';
@@ -150,7 +150,7 @@ include __DIR__ . '/includes/header.php';
 
     <!-- REVIEWS Section -->
      <section class="mt-5">
-        <h4>Reiews (<?= count($reviews) ?>)</h4>
+        <h4>Reviews (<?= count($reviews) ?>)</h4>
         <?php if (empty($reviews)): ?>
             <p class="texted-muted">No reviews yet. Be the first to review this product!</p>
         <?php else: ?>
