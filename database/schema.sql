@@ -156,6 +156,23 @@ CREATE TABLE reviews (
 );
 
 -- ---------------------------------------------
+-- Table 7: Payment Methods
+-- ---------------------------------------------
+CREATE TABLE payment_methods (
+    payment_method_id   INT AUTO_INCREMENT PRIMARY KEY, 
+    user_id             INT NOT NULL,
+    card_holder         VARCHAR(100) NOT NULL,
+    card_last4          VARCHAR(4) NOT NULL,
+    card_brand          VARCHAR(20),
+    expiry_mm           CHAR(2) NOT NULL,
+    expiry_yy           CHAR(2) NOT NULL,
+    is_default          BOOLEAN DEFAULT FALSE,
+    created_at          TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    
+    FOREIGN KEY (user_id) REFERENCES users(user_id) ON DELETE CASCADE
+);
+
+-- ---------------------------------------------
 -- SAMPLE DATA
 -- ---------------------------------------------
 

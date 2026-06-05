@@ -5,10 +5,20 @@ ini_set('display_errors', 1);
 error_clear_last();
 error_reporting(E_ALL);
 
-$DB_HOST = 'localhost';        // change to InfinityFree's MySQL host when deploying
-$DB_NAME = 'verkoopdit';       // your database name
-$DB_USER = 'root';             // default XAMPP user
-$DB_PASS = '';                 // default XAMPP password is empty
+// Auto-detect environment: local XAMPP vs InfinityFree
+if (($_SERVER['SERVER_NAME'] ?? '') == 'localhost' || ($_SERVER['SERVER_NAME'] ?? '') === '127.0.0.1') {
+    // Local devlopment (XAMPP)
+    $DB_HOST = 'localhost';
+    $DB_NAME = 'verkoopdit';
+    $DB_USER = 'root';
+    $DB_PASS = '';
+} else {
+    // Production (InfinityFree)
+    $DB_HOST = 'sql107.infinityfree.com';
+    $DB_NAME = 'if0_42096596_whynot_db';
+    $DB_USER = 'if0_42096596';
+    $DB_PASS = 'GohImFI3y89';
+}
 
 try {
     $pdo = new PDO(

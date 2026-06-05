@@ -99,8 +99,8 @@ include __DIR__ . '/includes/header.php';
                     <div class="mb-3">
                         <label class="form-label">I want to *</label>
                         <select name="role" class="form-select" required>
-                            <option value="buyer">Buy items only</option>
-                            <option value="seller">Buy AND sell items</option>
+                            <option value="buyer">Buy Only</option>
+                            <option value="seller">Buy & Sell</option>
                         </select>
                     </div>
                     <button type="submit" class="btn btn-primary w-100">Create Account</button>

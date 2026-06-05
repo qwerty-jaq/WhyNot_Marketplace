@@ -22,9 +22,9 @@ include __DIR__ . '/includes/header.php';
 <!-- =========== HERO SECTION =========== -->
 <section class="vd-hero py-5 text-center text-white">
     <div class="container py-4">
-        <h1 class="display-4 fw-bold mb-3">Buy - Sell, WhyNot?</h1>
+        <h1 class="display-4 fw-bold mb-3">Buy/Sell - WhyNot?</h1>
         <p class="lead mb-4">
-            South Africa's marketplace built for everyone.
+            South Africa's friendliest marketplace built for everyone.
         </p>
         <div class="d-flex justify-content-center gap-3 flex-wrap">
             <a href="/VerkoopDit/browse.php" class="btn btn-light btn-lg">
@@ -32,7 +32,7 @@ include __DIR__ . '/includes/header.php';
             </a>
             <?php if (is_logged_in()): ?>
                 <a href="/VerkoopDit/sell.php" class="btn btn-outline-light btn-lg">
-                    <i class="bi bi-plus-circle"></i> Sell an Item
+                    <i class="bi bi-plus-circle"></i> Sell Now
                 </a>
             <?php else: ?>
                 <a href="/VerkoopDit/register.php" class="btn btn-outline-light btn-lg">
@@ -41,6 +41,29 @@ include __DIR__ . '/includes/header.php';
             <?php endif; ?>
         </div>
     </div>
+</section>
+
+<!-- =========== FEATURED PRODUCTS =========== -->
+<section class="container py-5">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2 class="mb-0">Latest Listings</h2>
+        <a href="/VerkoopDit/browse.php" class="btn btn-outline-primary">
+            View All <i class="bi bi-arrow-right"></i>
+        </a>
+    </div>
+
+    <?php if (empty($featured)): ?>
+        <div class="alert alert-info">
+            No products listed yet. <a href="/VerkoopDit/register.php" class="alert-link">Sign up</a>
+            and be the first to sell!
+        </div>
+    <?php else: ?>
+        <div class="row">
+            <?php foreach ($featured as $product): ?>
+                <?php include __DIR__ . '/includes/product_card.php'; ?>
+            <?php endforeach; ?>
+        </div>
+    <?php endif; ?>
 </section>
 
 <!-- =========== CATEGORIES =========== -->
@@ -85,29 +108,6 @@ include __DIR__ . '/includes/header.php';
             </div>
         <?php endforeach; ?>
     </div>
-</section>
-
-<!-- =========== FEATURED PRODUCTS =========== -->
-<section class="container py-5">
-    <div class="d-flex justify-content-between align-items-center mb-4">
-        <h2 class="mb-0">Latest Listings</h2>
-        <a href="/VerkoopDit/browse.php" class="btn btn-outline-primary">
-            View All <i class="bi bi-arrow-right"></i>
-        </a>
-    </div>
-
-    <?php if (empty($featured)): ?>
-        <div class="alert alert-info">
-            No products listed yet. <a href="/VerkoopDit/register.php" class="alert-link">Sign up</a>
-            and be the first to sell!
-        </div>
-    <?php else: ?>
-        <div class="row">
-            <?php foreach ($featured as $product): ?>
-                <?php include __DIR__ . '/includes/product_card.php'; ?>
-            <?php endforeach; ?>
-        </div>
-    <?php endif; ?>
 </section>
 
 <!-- =========== WHY WHYNOT? =========== -->

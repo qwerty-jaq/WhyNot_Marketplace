@@ -74,7 +74,7 @@ $page_title = $page_title ?? 'WhyNot? - C2C Marketplace';
                             <i class="bi bi-person-circle"></i> <?= htmlspecialchars(current_user_name() ?? 'Account') ?>
                         </a>
                         <ul class="dropdown-menu dropdown-menu-end">
-                            <li><a class="dropdown-item" href="/VerkoopDit/orders.php">My Orders</a></li>
+                            <li><a class="dropdown-item" href="/VerkoopDit/profile.php"><i class="bi bi-person"></i> My Profile</a></li>
                             <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#logoutModal">Logout</a></li>
                         </ul>
                     </li>
