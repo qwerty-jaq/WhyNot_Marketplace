@@ -55,11 +55,15 @@ include __DIR__ . '/includes/header.php';
     </div>
 
     <!-- MY LISTINGS TABLE -->
-    <h4>My Listings</h4>
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <h4 class="mb-0">My Listings</h4>
+        <span class="badge bg-primary"><?= count($listings) ?> Listings</span>
+    </div>
     <?php if (empty($listings)): ?>
         <div class="alert alert-info">You don't have any listings yet. <a href="sell.php">Create one</a>.</div>
     <?php else: ?>
         <div class="table-responsive vd-table">
+            <table class="table table-hover align-middle mb-0">
             <thead>
                 <tr>
                     <th>Title</th>
@@ -91,6 +95,7 @@ include __DIR__ . '/includes/header.php';
                     </tr>
                 <?php endforeach; ?>
                 </tbody>
+            </table>
         </div>
     <?php endif; ?>
 </div>

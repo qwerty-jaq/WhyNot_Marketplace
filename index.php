@@ -27,7 +27,7 @@ include __DIR__ . '/includes/header.php';
             South Africa's friendliest marketplace built for everyone.
         </p>
         <div class="d-flex justify-content-center gap-3 flex-wrap">
-            <a href="/whynot/browse.php" class="btn btn-light btn-lg">
+            <a href="/whynot/browse.php" class="btn btn-light btn-lg vd-buy-btn">
                 <i class="bi bi-search"></i> Buy Now
             </a>
             <?php if (is_logged_in()): ?>
