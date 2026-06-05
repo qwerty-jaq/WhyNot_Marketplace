@@ -1,9 +1,9 @@
 -- Drop existing database (re-run safety)
-DROP DATABASE IF EXISTS whyNot?;
-CREATE DATABASE whyNot?
+DROP DATABASE IF EXISTS whyNot;
+CREATE DATABASE whyNot
     CHARACTER SET utf8mb4
     COLLATE utf8mb4_unicode_ci;
-USE whyNot?;
+USE whyNot;
 
 -- ---------------------------------------------------
 -- Table 1: Users
@@ -29,7 +29,6 @@ CREATE TABLE users (
 
 -- --------------------------------------------------
 -- Table 2: Categories
--- Table format for admins to add categories without changing the schema.
 -- --------------------------------------------------
 CREATE TABLE categories(
     category_id     INT AUTO_INCREMENT PRIMARY KEY,
@@ -182,10 +181,7 @@ CREATE TABLE payment_methods (
 INSERT INTO users 
     (username, email, password_hash, first_name, last_name, phone, location_user, role_user, is_verified, verification_status)
 VALUES
-    ('admin', 'admin@whynot?.co.za', 'placeholder_hash', 'Site', 'Admin', '0820000000', 'Cape Town', 'admin', TRUE, 'approved'),
-    ('lana', 'lana@whynot?.co.za', 'placeholder_hash', 'Lana', 'Dlamini', '0822222222', 'Soweto', 'seller', TRUE, 'approved'),
-    ('nomsa', 'nomsa@whynot?.co.za', 'placeholder_hash', 'Nomsa', 'Dlamini', '0823333333', 'Durban', 'seller', FALSE, 'pending'),
-    ('janco', 'janco@whynot?.co.za', 'placeholder_hash', 'Janco', 'Dlamini', '0824444444', 'Tyger Valley', 'buyer', FALSE, 'none');
+    ('admin', 'admin@whynot.co.za', 'placeholder_hash', 'Site', 'Admin', '0820000000', 'Cape Town', 'admin', TRUE, 'approved');
 
 -- Sample Products:
 INSERT INTO products 

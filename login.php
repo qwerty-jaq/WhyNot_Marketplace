@@ -59,7 +59,7 @@ include __DIR__ . '/includes/header.php';
                     Don't have an account? <a href="register.php">Sign up here</a>
                 </p>
                 <p class="text-center small text-muted">
-                    Test logins: <code> admin@whynot?.co.za</code> / <code>password123</code>
+                    Test logins: <code>admin@whynot.co.za</code> / <code>password123</code>
                 </p>
             </div>
         </div>

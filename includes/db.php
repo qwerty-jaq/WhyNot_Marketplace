@@ -1,15 +1,15 @@
 <?php
 
-// Show errors during development - REMOVE before deployment
+// Display PHP errors:
 ini_set('display_errors', 1);
 error_clear_last();
 error_reporting(E_ALL);
 
 // Auto-detect environment: local XAMPP vs InfinityFree
-if (($_SERVER['SERVER_NAME'] ?? '') == 'localhost' || ($_SERVER['SERVER_NAME'] ?? '') === '127.0.0.1') {
-    // Local devlopment (XAMPP)
+if (($_SERVER['SERVER_NAME'] ?? '') === 'localhost' || ($_SERVER['SERVER_NAME'] ?? '') === '127.0.0.1') {
+    // Local development (XAMPP)
     $DB_HOST = 'localhost';
-    $DB_NAME = 'verkoopdit';
+    $DB_NAME = 'whynot';
     $DB_USER = 'root';
     $DB_PASS = '';
 } else {

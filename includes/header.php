@@ -46,10 +46,10 @@ $page_title = $page_title ?? 'WhyNot? - C2C Marketplace';
         </button>
         <div class="collapse navbar-collapse" id="mainNav">
             <ul class="navbar-nav me-auto">
-                <li class="nav-item"><a class="nav-link" href="/whynot/browse.php"><i class="bi bi-search"></i>Buy</a></li>
+                <li class="nav-item"><a class="nav-link" href="/whynot/browse.php"><i class="bi bi-search"></i> Buy</a></li>
                 <?php if (is_logged_in()): ?>
-                    <li class="nav-item"><a class="nav-link" href="/whynot/sell.php"><i class="bi bi-tag"></i>Sell</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/whynot/orders.php"><i class="bi bi-box-seam"></i>Orders</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/whynot/sell.php"><i class="bi bi-tag"></i> Sell</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/whynot/orders.php"><i class="bi bi-box-seam"></i> Orders</a></li>
                     <li class="nav-item">
                         <a class="nav-link" href="/whynot/messages.php">
                             <i class="bi bi-chat-dots"></i> Messages
@@ -58,9 +58,9 @@ $page_title = $page_title ?? 'WhyNot? - C2C Marketplace';
                             <?php endif; ?>
                         </a>
                     </li>
-                    <li class="nav-item"><a class="nav-link" href="/whynot/seller-dashboard.php"><i class="bi bi-speedometer2"></i>Dashboard</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/whynot/seller-dashboard.php"><i class="bi bi-speedometer2"></i> Dashboard</a></li>
                     <?php if (current_user_role() === 'admin'): ?>
-                        <li class="nav-item"><a class="nav-link text-warning" href="/whynot/admin-dashboard.php"><i class="bi bi-shield-lock-fill"></i>Admin</a></li>
+                        <li class="nav-item"><a class="nav-link text-warning" href="/whynot/admin-dashboard.php"><i class="bi bi-shield-lock-fill"></i> Admin</a></li>
                     <?php endif; ?>
                 <?php endif; ?>
             </ul>
