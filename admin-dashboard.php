@@ -1,4 +1,4 @@
-<?php
+x<?php
 require_once __DIR__ . '/includes/db.php';
 require_once __DIR__ . '/includes/authentication.php';
 require_login();

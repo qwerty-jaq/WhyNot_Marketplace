@@ -28,10 +28,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             else {
                 $hash = password_hash($new_pass, PASSWORD_DEFAULT);
                 $pdo->prepare("UPDATE users SET password_hash=? WHERE user_id=?")->execute([$hash, $me]);
-                $success = 'Profile and password updated.';
+                $_SESSION['flash_message'] = 'Profile and password updated.';
+                header('Location: profile.php');
+                exit;
             }
         } else {
-            $success = 'Profile updated!';
+            $_SESSION['flash_message'] = 'Profile updated!';
+            header('Location: profile.php');
+            exit;
         }
 
         // Refesh
@@ -121,7 +125,7 @@ include __DIR__ . '/includes/header.php';
                     </div>
                     <button type="submit" class="btn btn-primary">Save Changes</button>
                     <a href="verify.php" class="btn btn-outline-success ms-2"><i class="bi bi-shield-check"></i> Seller Verification</a>
-                    
+                    </form>
                     <hr class="my-4">
                     <h4><i class="bi bi-credit-card"></i> Saved Payment Methods</h4>
 
@@ -182,7 +186,6 @@ include __DIR__ . '/includes/header.php';
                             </button>
                         </form>
                     </details>
-                </form>
             </div>
         </div>
     </div>
